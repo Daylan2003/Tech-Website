@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Iphone14 ProMax vs Samsung S23 Ultra</title>
+        <link rel="stylesheet" href="header.css">
+        <link rel="stylesheet" href="article-title.css">
+        <link rel="stylesheet" href="left-sidebar.css">
+        <link rel="stylesheet" href="right-sidebar.css">
+        <link rel="stylesheet" href="article.css">
+        <link rel="stylesheet" href="table-of-contents.css">
+        
+        <style>
+            .body{
+                background-color: white;
+                padding-top:70px;
+                display:grid;
+                grid-template-columns: 250px 1fr 250px;
+                column-gap: 0px;
+                padding-left: 0px;
+                padding-right: 0px;
+                margin-left: 0px;
+                margin-right: 0px;
+            }
+
+            .body-of-article{
+                display:inline-block;
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+
+            .left-sidebar,
+            .right-sidebar{
+                background-color: whitesmoke;
+            }
+        </style>
+    </head>
+    <body class="body">
+        <div class="left-sidebar">
+            <div class="the-links">
+                <p class="links-heading">
+                    Welcome to the Home Page
+                </p>
+                <p class="link-paragraph">
+                    This is the homepage. Thanks for taking the time to read !
+                </p>
+            </div>
+        </div>
+
+
+        <div class="body-of-article">
+            <div class="header">
+                <div class="site-name">
+                    BestUniElectronics
+                </div>
+                <div class="controls">   
+                    <a href="home.html">
+                        <button class="header-button">Home</button>                  
+                    </a>  
+
+                    <a href="phone-comparisions.html">
+                        <button class="header-button">Phone Comparisons</button>  
+                    </a>
+                    
+                    <a href="more-tech-articles.html">
+                        <button class="header-button">More Tech Articles</button>   
+                    </a>
+
+                    <a href="definitions.html">
+                        <button class="header-button">Definitions</button>    
+                    </a>
+                </div>
+            </div>
+
+               
+            <div class="article-title-info">
+                <p class="title">
+                    MORE TECH ARTICLES
+                </p>
+                <div class="name-and-date">
+                    <div class="author-name">
+                        <i>Created by: D.Maharaj</i>
+                    </div>
+                    <div class="article-date">
+                        <i>Made on 06/08/2023 at 12:48 a.m.</i>
+                    </div>
+                </div>
+            </div>
+
+            <table>
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Country</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>John Doe</td>
+                    <td>25</td>
+                    <td>USA</td>
+                  </tr>
+                  <tr>
+                    <td>Jane Doe</td>
+                    <td>23</td>
+                    <td>Canada</td>
+                  </tr>
+                  <tr>
+                    <td>Peter Smith</td>
+                    <td>30</td>
+                    <td>UK</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <input type="text" id="searchInput" placeholder="Search...">
+            
+        </div>
+
+
+        <div class="right-sidebar">
+
+        </div>
+
+        <script>
+                            function searchTable(input) {
+                // Get the table element.
+                const table = document.getElementById("myTable");
+
+                // Get the search input value.
+                const searchTerm = input.value.toUpperCase();
+
+                // Loop through the table rows.
+                for (let i = 0; i < table.rows.length; i++) {
+                    // Get the current row.
+                    const row = table.rows[i];
+
+                    // Loop through the row cells.
+                    for (let j = 0; j < row.cells.length; j++) {
+                    // Get the current cell.
+                    const cell = row.cells[j];
+
+                    // Check if the cell text contains the search term.
+                    if (cell.textContent.toUpperCase().indexOf(searchTerm) > -1) {
+                        // The cell text contains the search term, so show the row.
+                        row.style.display = "";
+                    } else {
+                        // The cell text does not contain the search term, so hide the row.
+                        row.style.display = "none";
+                    }
+                    }
+                }
+                }
+
+                // Attach the search function to the search input field's onkeyup event.
+                document.getElementById("searchInput").addEventListener("keyup", searchTable);
+        </script>
+
+    </body>
+</html>
